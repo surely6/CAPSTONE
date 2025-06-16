@@ -1,0 +1,91 @@
+:root {
+  /* for title sec of quiz/material selection */
+  --light-green: #aee9d0;
+  /* mainly for header and certain buttons */
+  --green: #4ab788;
+
+  /* search bar */
+  --light-grey: #f6eaea;
+  /* background */
+  --grey: #d9d9d9;
+  /* filter OR subsecion backgtround or button font color */
+  --dark-grey: #414443;
+
+  /* for creation/alteration btns -> edit, create */
+  --blue: #1081f2;
+  /* for denial btns -> exit, delete */
+  --red: #b74c4a;
+}
+
+header {
+  height: 12.5vh;
+  max-height: 12.5vh;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  background-color: var(--green);
+  z-index: 100;
+}
+
+footer {
+  background-color: var(--green) !important;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header li {
+  float: right;
+  height: 100%;
+  width: 10%;
+  margin: 0 1rem;
+}
+
+li#logo {
+  float: left;
+}
+
+header li a {
+  position: relative;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-grey);
+  border-bottom: var(--dark-grey) 3px solid;
+}
+
+li.options a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  background: var(--dark-grey);
+  left: 0;
+  transition: 0.5s, color 0s;
+  z-index: -1;
+}
+
+li.options a:hover::after {
+  height: 100%;
+}
+
+li.options a:hover {
+  color: var(--green);
+}
+
+li#logo a {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--dark-grey);
+  border-style: none;
+}
