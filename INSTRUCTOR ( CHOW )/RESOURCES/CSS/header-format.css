@@ -1,0 +1,181 @@
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+#main-header {
+  background-color: var(--green);
+  height: 12.5vh;
+  width: 100%;
+}
+
+#secondary-header {
+  background-color: var(--dark-grey);
+  height: 7.5vh;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+
+#secondary-header #select-detail {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+#secondary-header button {
+  margin-right: calc(2vw + 1rem);
+  background-color: var(--green);
+  border-style: none;
+  border-radius: 10px;
+  color: var(--dark-grey);
+  font-weight: 700;
+  font-family: "Inder", sans-serif;
+  font-size: max(1.5vw, 1rem);
+  padding: 5px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0 1.5vw;
+  height: 100%;
+  padding: 0 1.5vw;
+}
+
+header li {
+  float: right;
+  height: 100%;
+  width: calc(10% + 1.5rem);
+  margin: 0 1.5vw;
+}
+
+#secondary-header label {
+  margin-left: 2vw;
+  color: var(--grey);
+  font-size: calc(1vw + 0.5rem);
+}
+
+#secondary-header select {
+  margin-left: 1vw;
+  height: calc(2vw + 0.5rem);
+  font-family: "Inder", sans-serif;
+  font-size: calc(0.5vw + 0.75rem);
+  font-weight: 700;
+}
+
+#secondary-header input[type="text"] {
+  margin-right: 1vw;
+  height: calc(1.5vw + 0.5rem);
+  font-family: "Inder", sans-serif;
+  font-size: calc(0.5vw + 0.75rem);
+  font-weight: 700;
+  width: calc(3rem + 5vw);
+}
+
+#secondary-header input[type="text"]::placeholder {
+  font-size: calc(0.5vw + 0.5rem);
+}
+
+#main-header button {
+  font-family: "Inder", sans-serif;
+  font-size: calc(0.5vw + 0.75rem);
+  font-weight: 700;
+  color: var(--grey);
+  text-align: center;
+  width: 100%;
+  height: 60%;
+  border-radius: 10px;
+  border-style: none;
+}
+
+#main-header button:hover {
+  cursor: pointer;
+}
+
+ul#material-alter li {
+  display: flex;
+  align-items: center;
+}
+
+#main-header li#logo {
+  float: left;
+  margin-left: 65px;
+}
+
+#main-header li#logo a {
+  margin-left: 65px;
+}
+
+#main-header li a {
+  width: 100%;
+  position: relative;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(1vw + 0.5rem);
+  font-weight: 700;
+  color: var(--dark-grey);
+  border-bottom: var(--dark-grey) 3px solid;
+}
+
+#main-header li.options a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  background: var(--dark-grey);
+  left: 0;
+  transition: 0.5s, color 0s;
+}
+
+#main-header li.options a:hover::after {
+  height: 90%;
+  z-index: -1;
+}
+
+#main-header li.options a:hover {
+  color: var(--green);
+  z-index: 1;
+}
+
+#main-header li#logo a {
+  font-size: 5vw;
+  font-weight: 700;
+  color: var(--dark-grey);
+  border-style: none;
+}
+
+li#profileDropdown {
+  position: relative;
+  width: fit-content;
+}
+
+#profileMenu {
+  z-index: 1;
+  position: absolute;
+  top: 70%;
+  right: 0;
+}
+
+#profileMenu a {
+  background-color: var(--light-grey);
+  padding: 0.5vh 1vw;
+}
+
+@media screen and (max-width: 850px) {
+  #secondary-header {
+    height: 10vh;
+  }
+}
+
+footer {
+  margin-left: 2vw;
+}

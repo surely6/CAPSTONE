@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+main{
+    margin-top: 25vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(1, 70%);
+    grid-row: inherit;
+    grid-row-gap: 2vh;
+    justify-content: center ;
+}
+
+main #part{
+    display: grid;
+    grid-row-gap: 2rem;
+}
+
+#question{
+    display: grid;
+    grid-row-gap: 2rem;
+}
+
+main button#add{
+    position: fixed;
+    width: 12vw;
+    top: 25vh;
+    right: 1vw;
+    background-color: var(--green);
+    font-family: "Inder", sans-serif;
+    font-weight: 700;
+    color: var(--dark-grey);
+    text-align: center;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 1.5vw;
+    padding: 2vh 2vw;
+}
+
+main button#add:hover{
+    cursor: pointer;
+}
+
+main .section{
+    background-color: var(--dark-grey);
+    color: var(--dark-grey);
+    border-radius: 10px;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+main .section label{
+    color: var(--green);
+}
+
+main div label{
+    font-size: calc(1vw + 1.5rem);
+    font-weight: 700;
+    width: 100%;
+}
+
+main div input[type = text]{
+    box-sizing: border-box;
+    font-family: "Inder", sans-serif;
+    height: 3rem;
+    font-size: calc(1vw + 1.5rem);
+    width: 100%;
+    margin-bottom: 1.5vw;
+    padding: 1vh 1.5vw;
+}
+
+main div textarea{
+    margin: 2vh 0;
+    font-size: calc(1rem + 1vw);
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    padding: .5vh 1.5vw;
+    display: block;
+    overflow: hidden;
+}
+
+main div button{
+    margin-top: 1vw;
+    margin-left: 1vw;
+    background-color: var(--red);
+    font-family: "Inder", sans-serif;
+    font-weight: 700;
+    color: var(--grey);
+    text-align: center;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 1.25vw;
+    float: right;
+    padding: 1.5vh 2vw;
+}
+
+main div button:hover{
+    cursor: pointer;
+}
+
+.section select#question-type{
+    background-color: var(--green);
+    font-family: "Inder", sans-serif;
+    font-weight: 700;
+    color: var(--dark-grey);
+    text-align: center;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 1.25vw;
+    float: right;
+    padding: 1.5vh 2vw;
+    margin-right: 1vw;
+}
+
+div #answer-section{
+    margin-top: 3vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-auto-rows: 10vh;
+    row-gap: 3vh;
+    column-gap: 2vw;
+    justify-content: center;
+}
+
+#answer-section .answer{
+    background-color: var(--grey);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round{
+    display: block;
+    position: relative;
+    aspect-ratio: 1/1;
+    height: 50%;
+}
+
+.round label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--red);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.round input[type = checkbox]{
+    visibility: hidden;
+    margin: 0;
+}
+
+.round input[type = checkbox]:checked + label{
+    background-color: var(--green);
+}
+
+.answer input[type = text]{
+    margin: 0 5%;
+    width: 70%;
+    height: 70%;
+    font-size: 2vw;
+    border-style: none;
+    background-color: transparent;
+}
+
+.answer input[type = text]:focus{
+    border-style: none;
+    outline: none;
+}

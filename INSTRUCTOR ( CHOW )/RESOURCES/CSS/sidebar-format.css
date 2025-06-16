@@ -1,0 +1,158 @@
+#OpenFilter {
+  position: fixed;
+  left: 0px;
+  top: 10vh;
+  font-size: calc(1.2vw + 0.5rem);
+  padding: 0 0.5vw;
+  background-color: var(--dark-grey);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#filter {
+  position: fixed;
+  width: 18vw;
+  height: 85vh;
+  background-color: var(--dark-grey);
+  left: -18vw;
+  z-index: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  box-sizing: content-box;
+}
+
+#filter.show {
+  animation-name: MoveOut;
+  animation-duration: 500ms;
+  left: 0;
+}
+
+#filter.close {
+  animation-name: MoveIn;
+  animation-duration: 500ms;
+  left: -18vw;
+}
+
+@keyframes MoveIn {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -18vw;
+  }
+}
+
+@keyframes MoveOut {
+  from {
+    left: -18vw;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+#filter btn {
+  color: var(--grey);
+}
+
+#filter btn#CloseFilter {
+  cursor: pointer;
+  display: flex;
+  padding: 0 0 1vh 0.5vw;
+  font-weight: 600;
+  font-size: min(3vw, 1.5rem);
+  width: 70%;
+  margin: 1vh 0.5vw 1vh 2vw;
+  border-bottom: var(--grey) 2px solid;
+}
+
+btn#CloseFilter i {
+  margin-right: 1vw;
+}
+
+#search-area {
+  box-sizing: border-box;
+  padding: 3%;
+  margin: 0 1vw 2vh 2vw;
+  width: 80%;
+  background-color: var(--light-grey);
+  border: var(--dark-grey) 2px solid;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#search-area i {
+  cursor: pointer;
+}
+
+#search-area input[type="text"] {
+  font-family: "Inder", sans-serif;
+  font-size: calc(0.5vw + 0.5rem);
+  color: var(--dark-grey);
+  background-color: var(--light-grey);
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+
+#search-area input[type="text"]:focus {
+  border-style: none;
+  outline: none;
+}
+
+.CheckSection {
+  margin: 0 1rem 1rem 1.5rem;
+  color: var(--grey);
+}
+
+.CheckSection h3 {
+  cursor: pointer;
+  border-bottom: var(--grey) 2px solid;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+}
+
+.check-dropdown-list {
+  width: 100%;
+  display: none;
+}
+
+.check-dropdown-list label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.check-dropdown-list.active {
+  overflow-y: scroll;
+  height: auto;
+  display: block;
+}
+
+.check-dropdown-list.active::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.check-dropdown-list.active::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background-color: var(--grey);
+}
+
+.check-dropdown-list.active::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: var(--green);
+}
+
+label input {
+  background-color: aqua;
+}
+
+@media screen and (max-width: 850px) {
+  #OpenFilter {
+    top: 16vh;
+  }
+}
