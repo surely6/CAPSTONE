@@ -1,0 +1,386 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--grey);
+}
+.mainInfoArea {
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+
+  margin-top: 12.5vh;
+}
+.userInfo ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  width: 95%;
+  height: 4em;
+
+  z-index: 0;
+  border-bottom: 2px solid black;
+}
+
+.userInfo li {
+  float: left;
+  align-items: center;
+  width: 10em;
+  height: 98%;
+  margin: 0;
+}
+
+/* tabel tile, print and del */
+
+#printButtonBox,
+#acceptButtonBox {
+  margin-left: 60%;
+}
+
+#printButton,
+#acceptButton {
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  color: white;
+  background-color: var(--blue);
+  border-radius: 8px;
+  border: none;
+  margin-top: 0.95em;
+
+  float: right;
+}
+#printButton:hover,
+#acceptButton:hover {
+  background-color: #0a67b3;
+  cursor: pointer;
+}
+
+#deleteButton,
+#rejectButton {
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  color: white;
+  background-color: var(--red);
+  border-radius: 8px;
+  border: none;
+  margin-top: 0.95em;
+
+  float: right;
+}
+#deleteButton:hover,
+#rejectButton:hover {
+  background-color: #9e3e3e;
+  cursor: pointer;
+}
+
+.titleOfTable a {
+  display: flex;
+  font-size: 60px;
+  height: 1.4em;
+  width: 15em;
+  justify-content: left;
+  text-align: left;
+  align-items: baseline;
+  color: black;
+  margin-top: -0.3em;
+}
+
+.titleOfTable svg {
+  margin-top: 0.7em;
+}
+
+#backButton {
+  width: 3em;
+  margin-right: 1em;
+}
+#backButton:hover {
+  cursor: pointer;
+}
+
+/* info area */
+.mainInfoArea {
+  margin-top: 1em;
+}
+
+.mainInfoArea ul {
+  border-bottom: none;
+}
+
+.infoSection div {
+  background-color: var(--dark-grey);
+  border-radius: 0.5em;
+}
+
+.userProfileNDetail {
+  height: 35em;
+  width: 25em;
+  margin-right: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userFurtherDetail {
+  height: 0;
+}
+
+.userFurtherDetail div {
+  width: 100%;
+  height: 28em;
+}
+
+/* user info and detail */
+
+#userIconAndName {
+  margin-top: 1em;
+  justify-items: center;
+}
+
+#userIconAndName img {
+  height: 15em;
+  width: 15em;
+}
+
+#userIconAndName p {
+  font-size: 25px;
+  color: var(--grey);
+  text-align: center;
+}
+
+#userSmallDetail {
+  width: 85%;
+  height: 11em;
+  background-color: var(--grey);
+  justify-items: center;
+}
+
+#userSmallDetail ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#userSmallDetail li {
+  width: 95%;
+  height: 20%;
+}
+
+#userSmallDetail a {
+  font-size: 25px;
+  float: left;
+  border-bottom: none;
+}
+
+#userForm {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+#userForm,
+#emailLabel {
+  border-bottom: 2px solid black;
+}
+
+/* further detail */
+#userStatus,
+#itemStats {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#detailMainLabel {
+  height: 8.5em;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#detailMainLabel li {
+  margin: 0 3em 2em 3em;
+  height: 100%;
+  width: 12em;
+  text-align: center;
+}
+
+#detailMainLabel a {
+  font-size: 53px;
+  word-spacing: 1px;
+  margin: 10px;
+  color: var(--grey);
+}
+
+#timeData {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid var(--grey);
+}
+
+#timeData li {
+  margin: 0 3em 0 3em;
+  height: 100%;
+  width: 12em;
+  text-align: center;
+  border-top: 2px solid white;
+}
+
+#timeData a {
+  font-size: 26.5px;
+  color: var(--grey);
+  margin-top: 0.3em;
+}
+
+#learnStyleArea,
+#lastOnlineArea {
+  width: 90%;
+  display: flex;
+  justify-content: left;
+  height: 5em;
+}
+
+#learnStyleArea a,
+#lastOnlineArea a {
+  color: var(--grey);
+  font-size: 30px;
+}
+
+#learnStyleLabel,
+#lastOnlineLabel {
+  width: 40%;
+  justify-items: left;
+}
+
+#learnStyleData,
+#lastOnlineData {
+  width: 44%;
+  height: 5em;
+  justify-items: left;
+}
+#learnStyleData a,
+#lastOnlineData a {
+  text-align: left;
+}
+
+/* chart and legend stuff */
+
+#userDataNLegend {
+  display: flex;
+  gap: 2em;
+}
+
+#customLegend ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding-top: 45px;
+  width: 20em;
+  height: 25em;
+}
+
+#customLegend ul li {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin-left: 20px;
+  height: 1em;
+  width: 100%;
+  margin-bottom: 35px;
+  color: white;
+  font-size: 20px;
+}
+
+#customLegend ul li span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+
+#customLegend ul li p {
+  width: 14em;
+}
+
+#learnAndQuizButton {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  width: 93%;
+  gap: 1em;
+}
+#learnAndQuizButton h1 {
+  align-items: center;
+}
+#learnAndQuizButton .button {
+  margin-top: 0.5em;
+  width: 6em;
+  height: 2.5em;
+  border: 2px solid;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#learnAndQuizButton .button:hover {
+  background-color: var(--dark-grey);
+  color: var(--grey);
+  cursor: pointer;
+}
+#learnAndQuizButton .button.active {
+  background-color: var(--dark-grey);
+  color: var(--grey);
+}
+@media screen and (max-height: 550px) and (min-height: 20px) {
+  main {
+    margin-top: 20vh;
+  }
+
+  #printButtonBox,
+  #acceptButtonBox {
+    margin-left: 10%;
+  }
+
+  .userFurtherDetail {
+    width: 100%;
+    margin-top: 7em;
+  }
+
+  #detailMainLabel {
+    width: auto;
+  }
+  #detailMainLabel li {
+    margin: 0;
+  }
+
+  #tableTitle {
+    margin-top: 40em;
+  }
+
+  #userDataNLegend {
+    display: block;
+    gap: 2em;
+  }
+
+  #customLegend {
+    padding-top: 1em;
+    margin-top: 0.5em;
+  }
+  #customLegend ul {
+    height: 50%;
+  }
+  .instructor #lastOnlineArea {
+    margin-top: 13em;
+  }
+}

@@ -1,0 +1,214 @@
+body{
+    margin: 0;
+}
+
+
+/* Information Area */
+
+.SummaryInformation{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: var(--grey);
+
+    margin-top: 12.5vh;
+}
+
+.SummaryInformation b{
+    font-size: 40px;
+    margin-left: .7em;
+}
+
+
+#StudentSummary{
+    width:90em;
+    max-width: 100%;
+    background-color: var(--dark-grey);
+    height:36em;
+    border-radius: 1em;
+}
+
+#ModuleSummary{
+    width:90em;
+    max-width: 100%;
+    background-color: var(--dark-grey);
+    height:36em;
+    border-radius: 1em;
+}
+
+#QuizSummary{
+    width:90em;
+    max-width: 100%;
+    background-color: var(--dark-grey);
+    height:36em;
+    border-radius: 1em;
+}
+
+/* Information Button */
+
+#StudentButton, #ModuleButton, #QuizButton{
+    padding: 20px 20px 0 20px;
+}
+
+/* padding: 10px 20px 30px 40px; - Sets 10px padding on the top, 20px on the right, 30px on the bottom, and 40px on the lef */
+
+#printButton{
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 8px;
+    border: none;
+}
+
+#printButton:hover{
+    background-color: #0a67b3;
+    cursor: pointer;
+}
+
+/* All Buttons */
+
+#StudentButton, #ModuleButton, #QuizButton{
+    width: 98%;
+    border-bottom: var(--grey) 3px solid;
+    position: relative;
+    display: flex;
+    justify-self: center;
+}
+
+#StudentButton .button, #ModuleButton .button, #QuizButton .button{
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    background-color: var(--dark-grey);
+    border-radius: 10px 10px 0 0;
+    font-weight: 700;
+    border: 3px var(--grey) solid;
+    border-bottom: none;
+    margin: 0 0.5rem;
+}
+
+#StudentButton .button span, #ModuleButton .button span, #QuizButton .button span{
+    font-size: calc(1.5vw + .5rem);
+    position: relative;
+    display: inline-block;
+    padding: 0.5vh  1vw;
+    bottom: -3px;
+    color: var(--grey);
+}
+
+#StudentButton .button:hover, #ModuleButton .button:hover, #QuizButton .button:hover{
+    background-color: var(--grey);
+    cursor: pointer;
+}
+#StudentButton .button:hover span, #ModuleButton .button:hover span, #QuizButton .button:hover span{
+    color: var(--dark-grey);
+}
+#StudentData, #ModuleData, #QuizData{
+    position: relative;
+    height: 25em;
+    width: 60em;
+    background-color: #D9D9D9;
+    margin-left: 1em;
+}
+
+/* Legend */
+#StudentDataNLegend, #ModuleDataNLegend, #QuizDataNLegend{
+    display: flex;
+    gap: 2em;
+    padding-top: 1em;
+}
+
+#customLegend ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding-top: 10px;
+    width: 20em;
+    height: 25em;
+
+    max-height: 25em;
+    overflow: auto;   
+}
+
+#customLegend ul li{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin-left: 20px;
+    height: 1em;
+    width: 100%;
+    margin-bottom: 35px;
+    color: var(--grey);
+    font-size: 2vh;
+}
+
+#customLegend ul li span{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+#customLegend ul li p{
+    margin-top: .7em;
+    width: 14em;
+}
+
+#printButtonDiv{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+
+@media screen and (max-width: 1200px) {
+    .SummaryInformation{
+        margin-top: 0;
+        padding: 0;
+    }
+    .StudentInfo, .ModuleInfo, .QuizInfo{
+        width: 100%;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    #StudentData, #ModuleData, #QuizData{
+        width: 90%;
+        height: 50%;
+    }
+
+    #ModuleSummary, #QuizSummary{
+        height: 50em;
+    }
+    #customLegend ul li{
+        font-size: 2vh;
+    }
+    #customLegend ul li span{
+        height: 2vw;
+        width: 2vw;
+    }
+    #customLegend ul li p{
+        width: 10em;
+    }
+    .SummaryInformation{
+        margin-top: 40vh;
+    }
+    #StudentDataNLegend, #ModuleDataNLegend, #QuizDataNLegend{
+        display: block;
+        gap: 2em;
+    }
+    #customLegend{
+        padding-top: 1em;
+        margin-top: .5em;
+
+    }
+    #customLegend ul{
+        height: 50%;
+    }
+}

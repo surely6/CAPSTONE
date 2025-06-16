@@ -1,0 +1,95 @@
+
+#OpenFilter{
+    cursor: pointer;
+    position: fixed;
+    left: 0px;
+    top: 12vh;
+    height: 100%;
+    background-color: var(--dark-grey);
+}
+
+#OpenFilter svg{
+    padding-top: 0.2em;
+    color: var(--grey);
+}
+#filter{
+    position: fixed;
+    width: 15vw;
+    height: 87.5vh;
+    background-color: var(--dark-grey);
+    left: -15vw;
+    z-index: 1;
+    top: 12.5vh;
+
+    overflow-y: auto;  
+    overflow-x: hidden;    
+    scrollbar-width: thin; 
+}
+
+#filter.show{
+    animation-name: MoveOut;
+    animation-duration: 500ms;
+    left: 0;
+}
+
+#filter.close{
+    animation-name: MoveIn;
+    animation-duration: 500ms;
+    left: -15vw;
+}
+
+@keyframes MoveIn {
+    from {left: 0px;}
+    to {left: -15vw;}
+}
+
+@keyframes MoveOut {
+    from {left: -15vw;}
+    to {left: 0px;}
+}
+
+#filter btn{
+    color: var(--grey);
+}
+
+#filter  btn#CloseFilter{
+    cursor: pointer;
+    display: flex;
+    padding: 0 0 1vh 2vw;
+    font-weight: 600;
+    font-size: min(3vw, 1.5rem);
+    width: 70%;
+    margin: 1rem;
+    border-bottom: var(--grey) 2px solid;
+}
+
+#filter input[type=text]{
+    font-family: "Inder", sans-serif;
+    padding-left: 3%;
+    margin: 0 1rem 0.5rem 1rem;
+    width: 80%;
+    height: 5%;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    border: var(--dark-grey) 2px solid;
+    border-radius: 10px;
+}
+
+.CheckSection{
+    margin: 0 1rem 1rem 1.5rem;
+    color: var(--grey);
+}
+
+.CheckSection h3{
+    cursor: pointer;
+    border-bottom: var(--grey) 2px solid;
+    margin-bottom: 0.5rem;
+}
+
+.check-dropdown-list{
+    display: none;
+}
+
+.check-dropdown-list.active{
+    display: block;
+}
