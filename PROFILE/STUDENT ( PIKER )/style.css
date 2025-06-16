@@ -1,0 +1,111 @@
+:root {
+  /* for title sec of quiz/material selection */
+  --light-green: #aee9d0;
+  /* mainly for header and certain buttons */
+  --green: #4ab788;
+
+  /* search bar */
+  --light-grey: #f6eaea;
+  /* background */
+  --grey: #d9d9d9;
+  /* filter OR subsecion backgtround or button font color */
+  --dark-grey: #414443;
+
+  /* for creation/alteration btns -> edit, create */
+  --blue: #1081f2;
+  /* for denial btns -> exit, delete */
+  --red: #b74c4a;
+}
+
+body {
+  background-color: var(--grey);
+  font-family: "Inder", sans-serif;
+  color: var(--dark-grey);
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  position: relative;
+}
+
+main {
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 0 2.5vw;
+  transition: margin 500ms, width 500ms;
+}
+
+.title {
+  width: 90%;
+  border-bottom: var(--dark-grey) 3px solid;
+}
+
+.title h1 {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+#content {
+  width: 90%;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-auto-rows: 25vh;
+  grid-row-gap: 2rem;
+  justify-content: space-evenly;
+}
+
+.selection {
+  box-sizing: border-box;
+  background-color: var(--dark-grey);
+  color: var(--grey);
+  border-radius: 10px;
+}
+
+.selection .title {
+  box-sizing: border-box;
+  width: 100%;
+  height: 35%;
+  background-color: var(--light-green);
+  color: var(--dark-grey);
+  border-radius: 10px;
+  border: var(--dark-grey) 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .progress{
+    box-sizing: border-box;
+    height: 65%;
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 10%;
+} */
+
+#show-progress {
+  font-size: 1.2rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+#show-progress div {
+  position: absolute;
+  right: 0;
+}
+
+/* .progress-bar {
+  margin-top: 5%;
+  border-radius: 10px;
+  background-color: var(--grey);
+  width: 100%;
+  height: 0.7rem;
+}
+
+.progress-bar div {
+  border-radius: 10px;
+  background-color: var(--green);
+  height: 100%;
+} */
